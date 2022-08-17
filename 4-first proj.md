@@ -79,3 +79,44 @@ const server = http.createServer((req, res) => {
 ```js
 server.listen(8000);
 ```
+
+---
+
+## module global object
+
+- in nd every js file is a module
+- in js every variable is accessible with global object of Window
+
+```js
+const a = 2;
+window.a; // 2
+```
+
+with this obj we can import and export between files
+[link](https://nodejs.org/api/globals.html#module)
+[link](https://nodejs.org/api/modules.html#module)
+
+```js
+module.exports = { sayHi };
+module.exports = sayHi;
+module.exports.greeting = sayHi;
+exports = sayHi;
+exports.greeting = sayHi;
+```
+
+```js
+const logger = require("./logger");
+const { greeting } = require("./logger"); //new name
+const { sayHi } = require("./logger");
+```
+
+---
+
+### External module
+
+- we setup them with npm
+
+#### chalk extranal module
+
+make your output pretty in console
+[link](https://www.npmjs.com/package/chalk)
