@@ -120,3 +120,24 @@ const { sayHi } = require("./logger");
 
 make your output pretty in console
 [link](https://www.npmjs.com/package/chalk)
+
+---
+
+## npm
+
+- vulnerabilities ==>
+  means noghte zaaf
+- un ==> remove
+- npm list --depth=0 ==> all packages and extra
+- npm outdated ==> witch package is old
+- extension version lens ===> check version in package json file
+
+---
+
+### nodemon
+
+[link](https://nodemon.io/)
+
+- install it global
+- rs ==> restart
+- change watching files :
