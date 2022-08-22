@@ -68,3 +68,21 @@ terminal code:
   "add=hassan saber",
 ];
 ```
+
+---
+
+## yargs package
+
+[link](http://yargs.js.org/)
+
+- same like
+  terminal kit [link](https://www.npmjs.com/package/terminal-kit) and command line args [link](https://www.npmjs.com/package/command-line-args)
+
+Yargs
+
+helps you build interactive command line tools, by parsing arguments and generating an elegant user interface.
+
+It gives you:
+
+commands and (grouped) options (my-program.js serve --port=5000).
+a dynamically generated help menu based on your arguments:
