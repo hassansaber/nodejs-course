@@ -1,3 +1,5 @@
+# contact app
+
 ### JSON global object
 
 [link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
@@ -86,3 +88,76 @@ It gives you:
 
 commands and (grouped) options (my-program.js serve --port=5000).
 a dynamically generated help menu based on your arguments:
+
+- help flag
+
+```js
+ node . --help
+
+Options:
+  --help     Show help           [boolean]
+  --version  Show version number [boolean]
+```
+
+- version flag
+
+```js
+node . --version
+1.0.0
+```
+
+- create a command
+
+```js
+//create a command
+yargs.command({
+  command: "create", //name
+  aliases: ["c", "cr"], // set acronyms c or cr
+  describe: "[create new contact]", // info
+  builder: {
+    //build flag
+    fullname: {
+      //name --fullname
+      describe: "person fullname",
+      demandOption: true, // make flag required
+      type: "string", // set type
+      alias: "f", //set acronym -f
+    },
+    phone: {
+      describe: "person phone number",
+      demandOption: true,
+      type: "number",
+      alias: "p",
+    },
+    email: {
+      describe: "person email address",
+      demandOption: true,
+      type: "string",
+      alias: "e",
+    },
+  },
+  //func ==> what u do with data received from flags
+  handler({ fullname, email, phone }) {
+    console.log(fullname, email, phone);
+  },
+});
+
+yargs.parse(); //it returns args --> so we can always use them
+```
+
+===> example :
+`node . c -f 'myname' -e 'my email' -p 091165498`
+
+```js
+ali afdf 12244357 //builder response
+{ //log of args
+  _: [ 'c' ],
+  f: 'ali',
+  fullname: 'ali',
+  e: 'afdf',
+  email: 'afdf',
+  p: 12244357,
+  phone: 12244357,
+  '$0': ''
+}
+```
