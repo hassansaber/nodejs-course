@@ -145,8 +145,10 @@ yargs.command({
 yargs.parse(); //it returns args --> so we can always use them
 ```
 
-===> example :
+===>command example :
 `node . c -f 'myname' -e 'my email' -p 091165498`
+
+and response :
 
 ```js
 ali afdf 12244357 //builder response
@@ -161,3 +163,7 @@ ali afdf 12244357 //builder response
   '$0': ''
 }
 ```
+
+## DRY
+
+don't repeat yourself
