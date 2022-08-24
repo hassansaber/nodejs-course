@@ -167,3 +167,49 @@ ali afdf 12244357 //builder response
 ## DRY
 
 don't repeat yourself
+
+### additional :
+```js
+yargs.scriptName(chalk.yellow(`[CONTACT MANAGER]`))
+```
+script name is name of application
+
+```js
+yargs.usage(`$0 ${chalk.red('<command>')} ${chalk.green('[args]')}`)
+```
+usage is how to use app
+
+$0 means script name in output 
+
+-->
+
+===>command example :
+`node . --help
+
+and response :
+```js
+ node . --help
+[CONTACT MANAGER] <command> [args]
+
+Commands:
+  [CONTACT MANAGER]      [create new      
+  create                 contact]
+                          [aliases: c, cr]  [CONTACT MANAGER]      [list of all     
+  list                   contacts]        
+                              [aliases: l]  [CONTACT MANAGER]      [remove person   
+  remove                 from contacts    
+                         list][aliases: r]
+Options:
+  --help     Show help           [boolean]  --version  Show version number [boolean]
+
+```
+
+#### yargs version 
+`yargs.version("1.0.8");`
+
+version app
+
+
+
+---
+## DONE
